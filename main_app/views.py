@@ -18,10 +18,12 @@ def add_sample(request):
     return render(request, 'add_sample.html', {'form': form})
 
 # main_app/views.py
-from django.shortcuts import render
 
 def dashboard(request):
     return render(request, 'main_app/dashboard.html')
+
+def edit(request):
+    return render(request, 'main_app/edit.html')
 
 def add_sample(request):
     return render(request, 'main_app/add_sample.html')
