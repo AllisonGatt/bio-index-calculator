@@ -20,7 +20,7 @@ def add_sample(request):
 # main_app/views.py
 
 def dashboard(request):
-    return render(request, 'main_app/dashboard.html')
+    return render(request, 'templates/dashboard.html')
 
 def edit(request):
     return render(request, 'main_app/edit.html')

@@ -3,10 +3,11 @@
 import os
 import sys
 
+sys.path.append('/home/allisongatt/bio_index_calculator/src')
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bio_index_calculator.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'main.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
