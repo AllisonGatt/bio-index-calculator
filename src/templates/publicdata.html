@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Filter Samples</h2>
+<form method="GET">
+    {{ form.as_p }}
+    <button type="submit">Filter</button>
+</form>
+
+<h2>Filtered Results</h2>
+<ul>
+    {% for sample in samples %}
+        <li>{{ sample }} - {{ sample.sampling_region }} ({{ sample.sample_start_date }} to {{ sample.sample_end_date }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

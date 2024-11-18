@@ -1,0 +1,1 @@
+//JavaScript file for general site-wide interactions, such as navigation or form validation.

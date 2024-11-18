@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Filter Results{% endblock %}
+
+{% block content %}
+<h2>Filter Results</h2>
+<form method="post">
+    {% csrf_token %}
+    <!-- Filter form inputs -->
+    <label for="date_from">Date From:</label>
+    <input type="date" id="date_from" name="date_from">
+    <label for="date_to">Date To:</label>
+    <input type="date" id="date_to" name="date_to">
+    <button type="submit">Filter</button>
+</form>
+
+<h3>Filtered Results</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Taxa</th>
+            <th>Sample Count</th>
+            <th>EPT Index</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in filtered_data %}
+            <tr>
+                <td>{{ record.taxonomy }}</td>
+                <td>{{ record.sample_count }}</td>
+                <td>{{ record.ept_index }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

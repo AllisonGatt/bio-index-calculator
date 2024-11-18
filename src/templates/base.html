@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bio Index Calculator{% endblock %}</title>
+    <!-- Link to stylesheets or external resources -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/newuser">Register</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Content of specific page will go here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bio Index Calculator</p>
+    </footer>
+</body>
+</html>

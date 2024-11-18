@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ user.username }}!</h2>
+<p>Here are your recent results:</p>
+<a href="/newentry">Submit New Data</a> | <a href="/edit">Edit Your Entries</a>
+<table>
+    <thead>
+        <tr>
+            <th>Taxa</th>
+            <th>Sample Count</th>
+            <th>EPT Index</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in user_data %}
+            <tr>
+                <td>{{ record.taxonomy }}</td>
+                <td>{{ record.sample_count }}</td>
+                <td>{{ record.ept_index }}</td>
+                <td>{{ record.location }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
